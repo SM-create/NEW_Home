@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/f09b81980e.js" crossorigin="anonymous"></script>
+    <style>
+    p{
+        color: red;
+    }
+    #intro{
+        /* background-color: red; */
+        border: 5px green solid;
+    }   
+    #contents{
+        border: 5px purple solid;
+    }#schedule{
+        border: 5px blue solid;
+    }
+    table,tr,td,th{
+        border: 3px red solid;
+        border-collapse: 3px blue solid;
+    }
+        </style>
+</head>
+
+<body>
+    <p>빨간색 글자는 모두 안내문구 이며,p태그로 작성함.</p>
+    <p>각 영역은 div로 구성함</p>
+    <div id="intro">
+        <h4>intro영역</h4>
+        <h2>my homepage</h2>
+        <img src="/image/illustration-4377408_960_720.png" width="200" height="100" alt="프로그래머"> <br>
+        <b>sw개발자를</b> 꿈꾸며 열심히 공부하고있습니다. 
+    </div>
+    <div id="contents">
+        <h4>contents영역</h4>
+        <h3>현재 관심분야</h3>
+        <ul>
+            <li>java <img src="/image/illustration-4377408_960_720.png" style=" width: : 80px; height:50 px;"></li>
+            <li>frontend</li>
+            <li>backend developer</li>
+            <li><a href="https://www.google.com " target="_blank">구글링</a></li>
+            <li><a href="https://www.instagram.com" target="_blank">
+            <i class="fab fa-instagram-square" style="font-size: 50px"></i></a></li>
+
+        </ul>
+    </div>
+    <div id="schedule">
+        <h4>schedule영역</h4>
+        <h3>주요 일정</h3>
+        <table>
+            <tr>
+            <th>7월</th>
+            <th>9월</th>
+            <th>10월</th>
+            </tr>
+            <tr>
+                <td>프로젝트</td>
+                <td>수료 및 구직활동</td>
+                <td>직장인</td>
+            </tr>
+        </table>
+        
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="boardwrite" method="GET">
+        제목: <input type="text" name="btitle"><br>
+        작성자: <input type="text" name="bwriter"><br>
+        비밀번호: <input type="password" name="bpassword"><br>
+        내용: <textarea name="bcontents" rows="10" cols="10"></textarea><br>
+        카테고리: <select name="bcategory">
+                    <option value="study">공부</option>
+                    <option value="travel">여행</option>
+                    <option value="hobby">취미</option>
+                    
+                </select><br>
+
+                전체공개여부 : <input type="radio" name="bopen" value="y">예
+                            <input type="radio" nmae="bopen" value="n">아니오<br>
+                <input type="submit" value="글작성">
+                <button>글작성버튼</button>
+                </form>
+
+    </form>
+
+</body>
+
+</html>
