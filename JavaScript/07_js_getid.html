@@ -7,6 +7,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script>
+        //num1 num2 변수를줌 num3에 대입함
+        //ele1이란 변수에 id2부분을 가져옴
+        //ele1.innergtml을 사용해서 num3를 가져옴과 동시에
+        //h2 태그를 적용시킴
+        function test1(){
+            var num1= 5, num2=3;
+            var num3 = num1*num2;
+
+            var ele1 =document.getElementById('id2');
+            ele1.innerHTML ='<h2>'+num3+'</h2>';
+        }
 
     </script>
 
