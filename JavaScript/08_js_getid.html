@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Document</title>
+    <script>
+        function test1() {
+
+            //자바 스크립트 배열.
+            var arr = ['첫번째', '두번째', '세번째'];
+            console.log(arr);
+            console.log(arr[0]);
+            console.log(arr.length);
+
+        //     //배열에 요소추가.
+        //     arr.push('네번째');
+        //     console.log(arr);
+
+        //     arr[8] = '추가하는값';
+        //     console.log(arr);
+
+
+
+        //     //배열 요소 제거 
+        //     //pop:마지막 배열을 지움
+        //     //delete: 정해진 위치의 배열을 지움.
+
+        //     arr.pop();
+        //     console.log(arr);
+            
+        //     delete arr[2];
+        //     console.log(arr);
+
+        //      //데이터가 들어있는 인덱스값을 불러옴.
+        //     for (var a in arr) {
+        //         console.log(a);
+        //         console.log(arr[a]);
+
+        // }
+
+             //반복문을 이용해서 console에 arr배열을 입력.
+             for (i = 0; i < arr.length; i++) {
+                 console.log(arr[i]);
+         }
+
+            //ul을 사용해서 화면에 출력하기.
+            var arrPrint = "<ul>";
+            for (var i = 0; i < arr.length; i++) {
+                 arrPrint += "<li style='color:red;'>" + arr[i] + "</li>";
+            }
+            arrPrint += "</ul>";
+            document.getElementById("id1").innerHTML = arrPrint;
+
+        }
+    </script>
+</head>
+
+<body>
+    <button onclick="test1()">함수소환</button>
+
+    <div id="id1">
+        class영역
+    </div>
+</body>
+
+</html>

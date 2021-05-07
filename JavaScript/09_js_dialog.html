@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        function test1(){
+            console.log('test1함수');
+            alert('확인을 누르세요');
+            console.log('확인을 눌러야 출력됨');
+        }
+
+        function test2(){
+            console.log('test2함수');
+            //confirm 
+            var a= confirm('컨펌입니다.');
+            console.log(a); //리턴(true || false)이존재
+            
+            if(a){
+                console.log('승인완료');
+                alert('승인완료');
+            }else{
+                console.log('승인거절');
+                alert('승인거절');
+            }
+        }
+        function test3(){
+            console.log('test3함수');
+            var b= prompt('입력을 받아요.');
+            console.log(b);
+            alert(b);
+        }
+
+    </script>
+</head>
+
+<body>
+    <!-- 대화상자 :alert ,confirm, prompt -->
+    <button onclick="test1()">alert</button>
+    <button onclick="test2()">confirm</button>
+    <button onclick="test3()">prompt</button>
+</body>
+
+</html>

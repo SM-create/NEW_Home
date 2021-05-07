@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        //innerHTML: 시작 종료값 중간의 값을 넣어줌
+
+        //input 태그에 입력한 값 가져오기
+        //value : 입력값을 가져옴
+
+        function test1(){
+            var ele0= document.getElementById('id1').value;
+            console.log(ele0);
+        }
+
+        function cal(){
+            var num1 =document.getElementById('num1').value;
+            var num2 =document.getElementById('num2').value;
+            console.log(typeof num1); // typeof : 어떠한 값의 타입을 알수 있음
+            //타입 변환(String->number)
+            num1 =parseInt(num1);
+            num2 =parseInt(num2);
+            console.log(typeof num1); // number값으로 바뀜.
+            console.log(typeof num2); // number값으로 바뀜.
+            
+            var sum= num1+num2;
+            
+            document.getElementById('result').innerHTML=sum;
+            
+        }
+
+</script>
+</head>
+
+<body>
+
+    입력: <input type="text" id="id1"><br>
+    <button onclick="test1()">함수호출</button><br>
+
+    숫자1 : <input type="text" id="num1"><br>
+    숫자2 : <input type="text" id="num2"><br>
+
+    <p id="result">여기에 결과를 출력</p>
+    <button  onclick="cal()">덧셈계산</button>
+
+
+</body>
+
+</html>

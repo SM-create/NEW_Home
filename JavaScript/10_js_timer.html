@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    
+    <title>Document</title>
+    <script>
+        function test1() {
+            alert('test1호출');
+        }
+
+        function test2(){
+            //1초마다 timer 함수 호출
+            var time=setInterval(timer, 1000);
+        }
+
+            function timer(){
+                var date = new Date();
+                var ele =document.getElementById('id1');
+                ele.innerHTML =date;
+            }
+        
+    </script>
+</head>
+
+<body>
+
+    <button onclick="setTimeout(test1, 2000)">
+        2초뒤 함수 호출 </button>
+
+        <button onclick="test2()">test2 호출</button>
+        
+        <div id="id1">
+        </div>
+
+    </body>
+
+</html>
