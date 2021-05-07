@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 폼태그에서 작성한 값을 전송
+            action 속성 : form태그에서 작성한 값을 전송할 목적지
+                        : 보통은 백엔드에서 지정한 주소값을 사용함 -->
+ 
+    <form action="today">
+        아이디 : <input type="text" name="var1"><br>
+        비밀번호 : <input type="password" name="var2"><br>
+        <input type="submit" value="가입">
+    </form>
+
+    http://127.0.0.1:5500/TEST/join?id=&password=asd
+
+</body>
+</html>

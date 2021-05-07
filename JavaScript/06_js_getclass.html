@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function test1() {
+            var ele = document.getElementsByClassName('class1');
+            console.log(ele);
+            //배열을 따로 선언하지 않아도 된다.
+            console.log(ele[0]);
+            console.log(ele[1]);
+            console.log(ele[2]); // undefind
+
+            var ele1 =document.getElementsByClassName('class1');
+            console.log(ele1[0].innerHTML);
+            console.log(ele1[1].innerHTML);
+
+            ele1[0].innerHTML ='첫번째 클래스 내용변경';
+
+            //태그 요소접근
+            var ele2 =document.getElementsByClassName('div');
+            console.log(ele2);
+            console.log(ele2[0]);
+            console.log(ele2[1  ]);
+            }
+    </script>
+</head>
+
+<body>
+    <button onclick="test1()">호출버튼</button>
+    <div class="class1">
+        class1내용
+    </div>
+    
+    <div class="class1">
+        class1내용 두번째
+        
+    </div>
+</body>
+
+</html>

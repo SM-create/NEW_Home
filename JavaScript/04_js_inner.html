@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //호출이 되는 함수
+        //함수선언
+        function a(){
+            console.log('a 호출');
+        }
+        function b(){
+            console.log('b 호출');
+            alert('어디에 나올까요?');
+            console.log('나오는 시점은 언제인지');
+        }
+    </script>
+</head>
+
+<body>
+    <!-- script를 호출 -->
+    <!-- 아래버튼을 클릭했을때 a라는 함수 호출 -->
+    <button onclick="a()">a함수호출</button>
+    <button onclick="b()">b함수호출</button>
+    
+</body>
+
+</html>
