@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function test1(){
+            //body의 id요소에 접근
+            //현재 문서(documnet)에 있는 id1이라는 id를 
+            //가진 요소를 사용
+            console.log(document.getElementById('id1'));
+            // innerHTMl: 태그 내부(시작,종료태그사이)에 접근.
+            console.log(document.getElementById('id1').innerHTML);
+            
+            var ele =document.getElementById('id1');
+            console.log(ele);
+            console.log(ele.innerHTML);
+            
+            var ele1 = document.getElementById('id1').innerHTML;
+            console.log(ele1);
+
+            // id부분의 내용을 변경
+            document.getElementById('id1').innerHTML ='바뀌는 내용';
+            console.log(ele1);
+        }
+    </script>
+</head>
+
+<body>
+    <button onclick="test1()">함수호출</button><br><br>
+    <div id='id1'>
+        id1 영역    
+    </div>
+
+</body>
+
+</html>

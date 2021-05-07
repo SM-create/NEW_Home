@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 현재 html에 있는 모든 요소
+            box-sizing: border-box로 지정하게 되면 테두리를 포함하여 크기가지정됨.
+            이렇게 하지 않으면 테두리의 크기를 별도로 계산하게 되어 사이즈가 맞지 않고 넘치게 되는 경우가 발생함 */
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: gray;
+        }
+
+        .header {
+            padding: 30px;
+            text-align: center;
+            background-color: skyblue;
+        }
+
+        .nav {
+            display: inline-block;
+            position: sticky;
+            top: 0;
+            background-color: black;
+            width: 100%;
+        }
+
+        /* nav 클래스 내부에 있는 a태그 */
+        .nav a {
+            float: left;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            text-decoration: none;
+        }
+
+        /* nav 클래스 내부에 있는 a 태그에 마우스를 올렸을 때 css */
+        .nav a:hover {
+            background-color: white;
+            color: black;
+        }
+
+        .left {
+
+            float: left;
+            width: 75%;
+            background-color: blue;
+        }
+
+        .right {
+            float: left;
+            width: 25%;
+            background-color: burlywood;
+            margin-left: 10px;
+        }
+
+        .footer {
+            text-align: center;
+            background-color: yellow;
+            padding: 20px;
+            margin-top: 20px;
+        }
+
+        .img {
+            background-color: darkgrey;
+            width: 100px;
+            
+        }
+
+        .card{
+            background-color: white;
+            padding:20px;
+            margin-bottom: 10px;
+        }
+
+        /* float 속성을 해제하는 역할 */
+        .contents:after{
+            display: table;
+            clear: both;
+            content: "";
+        }
+        /* 화면의 폭이 좁혀졌을 때 1단으로 재배치 */
+        @media screen and (max-width:700px) {
+            .left,
+            .right{
+                width: 100%;
+                padding: 0;
+            }
+            
+        }
+
+
+    </style>
+
+</head>
+
+<body>
+    <div class="header">
+        <h1>My Website</h1>
+    </div>
+    <div class="nav">
+        <a href="#">메뉴1</a>
+        <a href="#">메뉴2</a>
+        <a href="#">메뉴3</a>
+        <a href="#">메뉴4</a>
+
+        <h1>메뉴</h1>
+    </div>
+
+    <!-- 본 내용이 들어갈 부분 -->
+    <div class="contents">
+        <!-- 왼쪽 75% 내용 -->
+        <div class="left">
+            <!-- 왼쪽 단에서 첫번째 내용 -->
+            <div class="card">
+                <h2>left영역</h2>
+                <h5>제목에 들어갈자리 , may6,2021</h5>
+                <div class="imgs" style="height: 200px;">이미지</div>
+                <p>본문이 들어갑니다..</p>
+                <p>여기에 본문을 배치합니다.</p>
+            </div>
+        </div>
+        <!-- 오른쪽 25% 내용 -->
+        <div class="right">
+            <div class="card">
+                <h2>자기소개</h2>
+                <div class="imgs" style="height: 200px;"></div>
+            </div>
+            <div class="card">
+                <div class="imgs" style="height: 200px;">
+                    <p>이미지</p>
+                </div>
+                <div class="imgs" style="height: 200px;">
+                    <p>이미지</p>
+                </div>
+                <div class="imgs" style="height: 200px;">
+                    <p>이미지</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>sns계정</h2>
+            <h1>연락처..</h1>
+        </div>
+
+        <div class="footer">
+            <h1>footer</h1>
+        </div>
+
+</body>
+
+</html>

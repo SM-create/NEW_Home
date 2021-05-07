@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>테이블연습</title>
+    <style>
+        /* table {
+            border: 1px solid black;
+            
+        }
+        tr,td{
+            border: 1px solid red;
+        } */
+
+        table,td,th,tr{
+            border: 1px solid black;
+            border-collapse: collapse;
+            padding: 20px;
+            /* padding 여백 */
+        }   
+        td{
+            text-align: right;
+        }
+        tr:nth-child(even){
+            background-color: chartreuse;
+        }tr:nth-child(odd){
+            background-color: blueviolet;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <caption>학생정보</caption>
+        <tr>
+        <th>이름</th>
+        <th>이메일주소</th>
+        <th>전화번호</th>     
+       </tr>
+       <tr>
+        <td>이름</td>
+        <td>a</td>
+        <td>전화번호</td>     
+       </tr>
+       <tr>
+        <td>이름</td>
+        <td>b</td>
+        <td>전화번호</td>     
+       </tr>
+       <tr>
+        <td>이름</td>
+        <td>c</td>
+        <td>전화번호</td>     
+       </tr>
+       <tr>
+           <td colspan="3">학생4</td>
+       </tr>
+    </table>
+    </body>
+</html>
