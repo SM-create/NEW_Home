@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+
+    <script>
+        function test1() {
+            console.log('함수호출');
+        }
+        function test2() {
+            console.log('함수호출');
+            document.getElementById("id3").innerHTML =
+                document.getElementById("id2").value;
+        }
+        function test3() {
+            console.log("onkeydown 함수호출");
+            document.getElementById('id5').innerHTML =
+                document.getElementById('id4').value;
+
+        }
+    </script>
+</head>
+
+<body>
+    <!-- onblur는 형식을 벗어나면 무조건 호출 
+         onchange 직전대비 바뀌면 함수 호출
+         onkeyup 입력하고 키를 누를때 호출
+         onkeydown 입력하고 키를 땔때 호출 (마지막 값 하나를 놓친다.) -->
+    입력1 : <input type="text" id="id1" onchange="test1()"> <br>
+    입력2 : <input type="text" id="id2" onkeyup="test2()"> <br>
+    입력3 : <input type="text" id="id4" onkeydown="test3()"> <br>
+
+    <p id="id3"></p>
+    <p id="id5"></p>
+
+</body>
+
+</html>

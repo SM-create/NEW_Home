@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+    <script>
+        function idcheck() {
+            // var exp = /^(?=.*[a-z])(?=.*\d)[a-z\d]{6,10}$/; 대문자X
+            var exp = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{6,10}$/;
+            // /^[소문자][대문자][숫자][소문자대문자\숫자][글자제한]$/;
+
+            //영문-소-문자, 숫자, 6~10자리 정규식
+             var exp = /^(?=.*[a-z])(?=.*\d)[a-z\d]{6,10}$/;
+
+            // 영문 -대.소- 문자, 숫자, 6~10자리 정규식 
+            var exp = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{6,10}$/;
+
+            //소문자, 숫자, 특수문자가 반드시 1개 이상 사용되어야함.
+            var exp = /^[a-z\d-_]{5,20}$/;
+
+            // 네이버 아이디 정규식 
+            // 영문소문자, 숫자, -_ 특수문자, 5~20자리
+            var exp = /^(?=.*[a-z])(?=.*\d)(?=.*[-_])[a-z\d-_]{5,20}$/;
+
+            var id = document.getElementById('id').value;
+            var result = document.getElementById('idcheck');
+            if (id.match(exp)) {
+                result.style.color = 'green';
+                result.innerHTML = '유효한 id형식입니다.'
+            } else {
+                result.style.color = 'red';
+                result.innerHTML = '6~10글자 숫자, 영문 소문자를 사용해주세요.'
+            }
+        }
+    </script>
+
+</head>
+
+<body>
+    <!-- 정규식(regular expression) 문자열 -->
+
+    아이디 : <input type="text" id="id" onblur="idcheck()"
+    placeholder="영문소문자, 숫자, 6~10글자 이내로 입력해주세요"><br>
+    <span id="idcheck"></span>
+    <button onclick="idcheck()">id정규식 채크</button>
+
+</body>
+
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function pwdcheck() {
+            // 입력값을 가져와서 일치하는지 판단 
+            var pw = document.getElementById('pw').value;
+            var checkResult = document.getElementById('pw-check-result');
+            var exp = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!#$-])[a-zA-Z\d!#$-]{8,18}$/;
+            if(pw.length==0){
+                checkResult.style.color = 'red';
+                checkResult.innerHTML = '필수입력정보입니다.';
+            } else if(!pw.match(exp)){ // ! 반전식
+                checkResult.style.color = 'red';
+                checkResult.innerHTML = '유효하지 않은 형식입니다.';
+            } else {
+                checkResult.style.color = 'green';
+                checkResult.innerHTML = '유효한형식입니다.';
+            }
+        }
+        function pwdconfirm() {
+            var pw = document.getElementById('pw').value;
+            var pwConfirm = document.getElementById('pw-confirm').value;
+            var confirmResult = document.getElementById('pw-confirm-result');
+            if(pw == pwConfirm){
+                confirmResult.style.color = 'green';
+                confirmResult.innerHTML = '비밀번호 일치';
+            } else {
+                confirmResult.style.color = 'red';
+                confirmResult.innerHTML = '비밀번호 불일치';
+            }
+        }
+    </script>
+    <style>
+        input {
+            width: 300px;
+        }
+    </style>
+</head>
+<body>
+    비밀번호: <input type="text" id="pw" onblur="pwdcheck()" placeholder="비밀번호를 입력하세요"><br>
+    <span id="pw-check-result"></span> <br>
+    비밀번호확인: <input type="text" id="pw-confirm" onblur="pwdconfirm()" placeholder="비밀번호를 한번 더 입력하세요"><br>
+    <span id="pw-confirm-result"></span>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function test1() {
+            console.log ('test1함수 호출');
+            var ele= document.getElementById('id1');
+            console.log(ele.value);
+            document.getElementById('id2').innerHTML=ele.value;
+        }
+    </script>
+</head>
+<body>
+
+    <!--onchange 변화가 있을때 함수를 호출한다. -->
+    <select id="id1" onchange="test1()">
+
+    <option value="html">html</option>
+    <option value="css">css</option>
+    <option value="js">js</option>
+    <option value="java">java</option>
+</select>
+<h2 id="id2"></h2>
+    
+</body>
+</html>

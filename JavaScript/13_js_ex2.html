@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        tr,td,table{
+            border: 1px black solid;
+            border-collapse: collapse;
+            text-align: right;
+        }
+        td{
+            width: 30px;
+        }
+        tr:nth-child(even){
+            background-color: burlywood;
+        }
+    </style>
+    <script>
+        function test1() {
+            var table ="<table>";
+        
+            for(var i=2; i<=9; i++){
+               table+="<tr>";
+                table+="<td>"+i+"단</td>";
+                for(var j=1; j<=9; j++){
+                    table+="<td>"+i+"x"+j+"="+j*i+"</td>";
+                    
+                }
+                table+="</tr>";
+        }
+
+        table+="</table>";
+        document.getElementById('result').innerHTML=table;
+        }
+        </script>
+</head>
+
+<body>
+
+</body>
+<button onclick="test1()">구구단출력</button>
+<div id="result"></div>
+<div style="color: red;">
+</div>
+
+</html>

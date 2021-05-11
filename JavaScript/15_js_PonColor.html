@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function test1(){
+            document.getElementById('id1').style.color='red';
+            var ele=document.getElementById('id1');
+            ele.style.color='yellow';
+        }
+        function test2(){
+            document.getElementById('id1').style.visibility='hidden';
+        }
+        function test3(){
+            document.getElementById('id1').style.visibility='visible';
+        }
+    </script>
+</head>
+
+<body>
+    <h2 id="id1">오늘은 일요일 입니다.</h2>
+    <button onclick="test1()">글자색 변경</button>
+    <button onclick="test2()">사라짐</button>
+    <button onclick="test3()">나타남</button>
+</body>
+
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+    <script>
+        function test1() {
+            console.log('test1 함수호출');
+        }
+        function test2() {
+            console.log('test2 함수호출');
+            document.getElementById('id2').style.backgroundColor = 'red';
+        }
+        function test3() {
+            console.log('test3 함수호출');
+            document.getElementById('id3').style.color = 'red';
+        }
+
+        function test4() {
+            console.log('test4 함수호출');
+            document.getElementById('id3').style.color = 'blue';
+        }
+        function test5() {
+            var ele = document.getElementById('id4');
+
+            ele.style.border = '5px red solid';
+        }
+        function test6() {
+            var ele = document.getElementById('id4');
+
+            ele.style.border = '5px blue solid';
+        }
+    </script>
+    <style>
+        #id4 {
+            background-color: yellow;
+            width: 200px;
+            height: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- onmouseup: 눌렀다가 땔때 발생 
+         onmousedown: 누르는동안 발생 
+         onmouseover: 마우스를 영역에 들어올때
+         onmouseout: 마우스가 영역을 나갈때-->
+
+    <p id="id1" onclick="test1()">내용1</p>
+    <p id="id2" ondblclick="test2()">내용2</p>
+    <p id="id3" onmousedown="test3()" onmouseup="test4()">내용3</p>
+    <div id="id4" onmouseover="test5()" onmouseout="test6()">
+        마우스를 들락날락
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function calGrade(){
+            var score =document.getElementById('score').value;
+            var grade;
+            if(score>=90){
+                console.log('a');
+                grade='a';
+            }else if (score>=80){
+                grade='b';
+            }else{
+                grade='f';
+            }
+            document.getElementById('grade').value=grade;
+            document.getElementById('result').innerHTML=grade;
+        }
+    </script>
+</head>
+
+<body>
+    점수: <input type="text" id="score"><br>
+    성적: <input type="text" id="grade"><br>
+    <button onclick="calGrade()">성적</button>
+    <div id="result">
+        성적출력
+    </div>
+</body>
+
+</html>

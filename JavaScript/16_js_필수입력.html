@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+    <style>
+        input:focus{
+            outline: none;
+        }
+    </style>
+
+    <script>
+        function test1(){
+            console.log('test1 함수 호출');
+            
+            // alert('입력칸을 벗어났습니다.')
+            var ele = document.getElementById('id1');
+            
+            // toUpperCase 대문자로 자동변경
+            ele.value =ele.value.toUpperCase();
+
+            var result =document.getElementById('result');
+            
+            // console.log(ele.value.length);
+            // if(ele.value.length==0){
+            //     result.style.color='red';
+            //     result.innerHTML='필수입력항목입니다.'
+            // }else if(ele.value.length<8 || ele.value.length>16){
+            //     result.style.color = 'green';
+            //     result.innerHTML = '8~16자 이내로 써주세요.';
+            // }
+
+            var ele1 =document.getElementById('id1').value;
+            if(ele1.length==0){
+                result.style.color='red';
+                result.innerHTML ='필수입력항목입니다.'
+            } else if(ele.value.length<8 || ele.value.length>16){
+             result.style.color = 'green';
+                result.innerHTML = '8~16자 이내로 써주세요.';
+            }
+        }
+    </script>
+</head>
+
+<body>
+    입력1 : <input type="text" id="id1" onblur="test1()"><br>
+    <span id="result"></span><br>
+    입력2 : <input type="text" id="id2">
+
+</body>
+
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+    <script>
+        function idcheck() {
+
+
+
+            // 영문소문자, 숫자, -_ 특수문자, 8~18자리
+            // var exp = /^(?=.*[a-z])(?=.*\d)(?=.*[!#$-])[a-z\d!#$-]{8,18}$/;
+
+            var exp = /^(?=.*[a-z])(?=.*\d)(?=.*[!#$-])[a-z\d!#$-]{8,18}$/;
+
+
+            var pw1 = document.getElementById('id1').value;
+            var pw2 = document.getElementById('id2').value;
+            var result = document.getElementById('idcheck');
+            
+            if (pw1=="") {   //or (id1.length==0)
+                console.log('if문시작');
+                result.style.color = 'red';
+                result.innerHTML = '필수정보입니다.';
+
+            } else if (pw1.match(exp)) { //id값 == 정규문
+                console.log('정규문 시작');
+                result.style.color = 'green';
+                result.innerHTML = '유효한 id형식입니다.'
+            } else if (pw2.match(exp) && pw1 == pw2) {  //값이 일치 할 경우 
+                console.log('일치');
+                result.style.color = 'green';
+                result.innerHTML = '일치';
+
+            } else if(pw1==pw2){  //일치하지 않을 경우
+                console.log('불일치');
+                result.style.color = 'red';
+                result.innerHTML = '불일치';
+            }
+
+        }
+    </script>
+
+</head>
+
+<body>
+
+    비밀번호 : <input type="text" id="id1" onblur="idcheck()" 
+    placeholder="영문소문자, 숫자, !#$- 특수문자, 8~18자리 이내로 입력해주세요"><br>
+    <span id="idcheck"></span> <br>
+
+    비밀번호 확인 : <input type="text" id="id2" onblur="idcheck()"
+    placeholder="영문소문자, 숫자, !#$- 특수문자, 8~18자리 이내로 입력해주세요"><br>
+    <span id="idcheck"></span>
+
+
+</body>
+
+</html>

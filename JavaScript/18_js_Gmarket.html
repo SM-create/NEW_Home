@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function test1() {
+            console.log('함수호출');
+            var ele = document.getElementById('id1').value;
+            var domainValue = document.getElementById('domain');
+            domainValue.value = ele;
+            //위에 두줄과 같은 기능
+            document.getElementById('domain').value = ele;
+        }
+    </script>
+</head>
+
+<body>
+    이메일 : <input type="text"> @ <input type="text" id="domain">
+    <select id="id1" onchange="test1()">
+        <option value="">직접입력</option>
+        <option value="gamil.com">gamil.com</option>
+        <option value="naver.com">naver.com</option>
+        <option value="hanmail.net">hanmail.net</option>
+    </select>
+</body>
+
+</html>
